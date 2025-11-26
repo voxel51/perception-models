@@ -1,6 +1,6 @@
 import sys
 
-# Relative import works because package_dir maps "." to perception_models
+# Relative import so that import core internally and import perception_models works from outside this package
 from . import core
 
 sys.modules['core'] = core
