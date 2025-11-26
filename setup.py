@@ -12,7 +12,7 @@ def read_requirements(filename):
 
 setup(
         name="perception_models",
-        version="1.0.0",
+        version="1.0.0.dev2",
         author="Meta AI Research, FAIR",
         description="Models of the Perception family.",
         url="https://github.com/facebookresearch/perception_models",
