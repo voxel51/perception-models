@@ -16,7 +16,10 @@ setup(
         author="Meta AI Research, FAIR",
         description="Models of the Perception family.",
         url="https://github.com/facebookresearch/perception_models",
-        packages=find_packages(),
+        package_dir={"perception_models": "."},
+        packages=["perception_models"] + [
+            f"perception_models.{pkg}" for pkg in find_packages()
+        ],
         package_data={
             "core.vision_encoder": ["bpe_simple_vocab_16e6.txt.gz"]
         },
