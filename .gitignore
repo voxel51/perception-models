@@ -8,3 +8,8 @@ data-gym-cache/*
 torchinductor_*/*
 tmp*/*
 apps/plm/dummy_datasets
+
+.venv/
+build/
+dist/
+*.egg-info/
