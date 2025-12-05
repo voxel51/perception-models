@@ -1,6 +1,5 @@
 from setuptools import find_packages, setup
 
-
 def read_requirements(filename):
     with open(filename) as f:
         return [
@@ -12,7 +11,7 @@ def read_requirements(filename):
 
 setup(
         name="perception_models",
-        version="1.0.0.dev4",
+        version="1.0.0.dev5",
         author="Meta AI Research, FAIR",
         description="Models of the Perception family.",
         url="https://github.com/facebookresearch/perception_models",

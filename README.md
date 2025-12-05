@@ -1,3 +1,23 @@
+# Note for Voxel51!
+
+This wheel is built and published to a local google artifact registry.
+To build the wheel:
+
+```shell
+python setup.py sdist bdist_wheel
+```
+
+Then, to publish the wheel:
+
+```shell
+pip install twine keyrings.google-artifactregistry-auth
+
+PYTHON_KEYRING_BACKEND=keyrings.gauth.GooglePythonAuth python -m twine upload \
+  --repository-url \
+  https://us-central1-python.pkg.dev/computer-vision-team/dev-python/ \
+  dist/*
+```
+
 # Perception Models: Powerful Models for Image and Video Perception
 [![Code License](https://img.shields.io/badge/Code_License-Apache_2.0-olive)](https://opensource.org/licenses/Apache-2.0)
 
