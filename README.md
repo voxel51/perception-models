@@ -1,5 +1,17 @@
 # Note for Voxel51!
 
+<div align="center">
+
+[![Discord](https://img.shields.io/badge/Discord-7289DA?logo=discord&logoColor=white)](https://discord.gg/fiftyone-community)
+[![Hugging Face](https://img.shields.io/badge/Hugging_Face-purple?style=flat&logo=huggingface)](https://huggingface.co/Voxel51)
+[![Voxel51 Blog](https://img.shields.io/badge/Voxel51_Blog-ff6d04?style=flat)](https://voxel51.com/blog)
+[![Newsletter](https://img.shields.io/badge/Newsletter-BE5B25?logo=mail.ru&logoColor=white)](https://share.hsforms.com/1zpJ60ggaQtOoVeBqIZdaaA2ykyk)
+[![LinkedIn](https://img.shields.io/badge/In-white?style=flat&label=Linked&labelColor=blue)](https://www.linkedin.com/company/voxel51)
+[![Twitter](https://img.shields.io/badge/Twitter-000000?logo=x&logoColor=white)](https://x.com/voxel51)
+[![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/voxel51)
+
+</div>
+
 This wheel is built and published to a local google artifact registry.
 To build the wheel:
 
@@ -39,7 +51,6 @@ This repo is the home to the state-of-the-art for image and video _perception_: 
 * **[Apr-18-25]:** Perception Language Model (PLM) and PLM-VideoBench are added to lmms-eval. This makes it easy to reproduce PLM results and allows you to evaluate on the PLM-VideoBench. [[`lmms-eval`](https://github.com/EvolvingLMMs-Lab/lmms-eval/pull/638)] :fire::fire:
 * **[Apr-17-25]:** Perception Encoder (PE) and Perception Language Model (PLM) are released. [[`Blog`](https://ai.meta.com/blog/meta-fair-updates-perception-localization-reasoning)] :fire::fire:
 
-
 ## Perception Encoder (PE)
 [![Data](https://img.shields.io/badge/Download-PE%20Data-ffcc00.svg)](https://huggingface.co/datasets/facebook/PE-Video)
 [![Hugging Face Collection](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Collection-blue)](https://huggingface.co/collections/facebook/perception-encoder-67f977c9a65ca5895a7f6ba1)
@@ -75,7 +86,6 @@ PE has 3 types of checkpoints, each excelling in a different area of computer vi
 |    | **L/14** 448px | [PE-Lang-L14-448](https://huggingface.co/facebook/PE-Lang-L14-448) | 81.9 | 46.4 | 73.0 | 52.3 | 54.7 | 59.8 |
 |    | **G/14** 448px | [PE-Lang-G14-448](https://huggingface.co/facebook/PE-Lang-G14-448) | 84.4 | 48.3 | 75.2 | 52.4 | 56.0 | 62.0 |
 
-
 🔥 SotA Setting:
 |    | Model | Encoder | Doc VQA (test) | InfoQA (test) | TextVQA | MVBench | PerceptionTest (test) | EgoSchema (test) |
 |:--:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -89,7 +99,6 @@ PE has 3 types of checkpoints, each excelling in a different area of computer vi
 |    | Encoder | Checkpoint | ADE20k <br/> [Segmentation](https://github.com/open-mmlab/mmsegmentation)<br />Linear Probe mIoU | DAVIS<br /> [Tracking](https://github.com/facebookresearch/dino/blob/main/eval_video_segmentation.py) <br />Zero-Shot J&F  | LVIS <br /> [Mask R-CNN](../detection/detectron2_pe/) 1024px <br /> Box / Mask mAP | COCO <br/> [DETA](../detection/DETA_pe/) 1824px <br /> Box mAP |
 |:--:|:---:|:---:|:---:|:---:|:---:|:---:|
 |    | **G/14** 448px | [PE-Spatial-G14-448](https://huggingface.co/facebook/PE-Spatial-G14-448) | 49.3 | 61.5 | 54.2 / 49.3 | 66.0 |
-
 
 <div align="center">
   <img src="apps/pe/docs/assets/spatial_correspondence.png" style="width: 80%; margin: 0 auto; padding-top: 20px; padding-bottom: 20px; display: block;" />
@@ -138,7 +147,6 @@ print("Label probs:", text_probs)  # prints: [[0.0, 0.0, 1.0]]
 > [!TIP]
 > See [`apps/pe/README.md`](apps/pe/README.md) for details and how to get started!
 
-
 ## Perception Language Model (PLM)
 [![Data](https://img.shields.io/badge/Download-PLM%20Data-ffcc00.svg)](https://huggingface.co/datasets/facebook/PLM-Video-Human)
 [![Hugging Face Collection](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Collection-blue)](https://huggingface.co/collections/facebook/perception-lm-67f9783f171948c383ee7498)
@@ -183,15 +191,12 @@ PLM releases models in three different sizes (1B, 3B and 8B).
 | **End-to-End Finetuning Example** | End-to-end finetuning example on radiology images | [`docs/finetune_example.md`](apps/plm/docs/finetune_example.md) |
 | **Generating Response** | Generate responses using a trained model with `generate.py` | [`generate.py`](apps/plm/generate.py)                           |
 
-
 > [!TIP]
 > See [`apps/plm/README.md`](apps/plm/README.md) for details and how to get started!
 
 ## Dataset Releases
 
-
 ### 🎥 [PE-Video-Dataset (PVD)](https://huggingface.co/datasets/facebook/PE-Video)
-
 
 PVD comprises 1M high quality and diverse videos. Among them, 120K videos are accompanied by automated and human-verified annotations. and all videos are accompanied with video description and keywords. The videos are motion-centered, covering both first-person and third-person views with a wide coverage of scenes. 
 
@@ -214,7 +219,6 @@ PVD comprises 1M high quality and diverse videos. Among them, 120K videos are ac
 </table>
 
 ---
-
 
 ### 🎥 [PLM-Video-Human](https://huggingface.co/datasets/facebook/PLM-Video-Human)
 
@@ -293,7 +297,6 @@ Sythetic image/video captions and QAs used in PLM, please refer to the paper, Se
 
 📹 [**PLM-Video-Auto**](https://huggingface.co/datasets/facebook/PLM-Video-Auto) — Automatically generated video datasets
 
-
 ---
 
 ## Installation :wrench:
@@ -315,10 +318,8 @@ pip install -e .
 ```
 This will install an editable version of repo, allowing you to make changes to the code without needing to reinstall the package every time.
 
-
 ## 🙏 Acknowledgement
 We are thankful to [Meta Lingua](https://github.com/facebookresearch/lingua) for releasing their code as open-source contributions. The code structure and code implementation of the LLM is directly forked from [Meta Lingua](https://github.com/facebookresearch/lingua). We are also thankful to [Open_CLIP](https://github.com/mlfoundations/open_clip) for open-source contributions in CLIP training, and [CLIP_benchmark](https://github.com/LAION-AI/CLIP_benchmark) for CLIP model evaluation. 
-
 
 ## 📜 Citation
 ```BibTeX
