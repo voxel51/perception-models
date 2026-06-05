@@ -22,8 +22,9 @@ setup(
         package_data={
             "core.vision_encoder": ["bpe_simple_vocab_16e6.txt.gz"]
         },
-        install_requires=read_requirements("requirements-core.txt"),
+        install_requires=read_requirements("requirements-pe.txt"),
         extras_require={
+            "core": read_requirements("requirements-core.txt"),
             "apps": read_requirements("requirements-apps.txt"),
             "all": read_requirements("requirements-all.txt"),
         },

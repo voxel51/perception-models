@@ -1,0 +1,20 @@
+# Minimal dependencies to use the Perception Encoder vision models, i.e.
+# `perception_models.core.vision_encoder.{pe,transforms}`.
+#
+# This is the smallest set that satisfies the import chain triggered by
+# `import perception_models` (__init__ -> rope, config, pe, transforms ->
+# tokenizer). It deliberately omits training/eval/app deps.
+#
+# NOTE: `regex` and `huggingface_hub` are required by the tokenizer/config
+# modules but are NOT in requirements-core.txt -- there they only work because
+# `tiktoken`/`timm` happen to pull them in transitively. They must stay listed
+# here.
+#
+# `torch` and `torchvision` are not pinned (they are deps of `timm`, and are
+# expected to be installed already, e.g. by FiftyOne).
+einops
+ftfy
+huggingface_hub
+numpy
+regex
+timm
